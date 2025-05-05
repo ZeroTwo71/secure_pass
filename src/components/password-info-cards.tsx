@@ -24,7 +24,7 @@ export function PasswordInfoCards() {
           </div>
           <h3 className="text-lg font-semibold mb-4">Complex</h3>
           <p className="text-muted-foreground">
-            Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.
+            Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn&apos;t resemble words or names.
           </p>
         </div>
         

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import QRCode from "qrcode"
+import Image from "next/image"
 
 export function QRCodeGenerator({ text }: { text: string }) {
   const [qrCodeDataUrl, setQrCodeDataUrl] = useState<string>("")
@@ -47,7 +48,15 @@ export function QRCodeGenerator({ text }: { text: string }) {
       
       {qrCodeDataUrl ? (
         <div className="my-4 bg-white p-4 rounded-lg">
-          <img src={qrCodeDataUrl} alt="QR Code" className="w-40 h-40 mx-auto" />
+          <div className="relative w-40 h-40 mx-auto">
+            <Image 
+              src={qrCodeDataUrl} 
+              alt="QR Code" 
+              fill
+              style={{ objectFit: "contain" }}
+              unoptimized
+            />
+          </div>
         </div>
       ) : (
         <div className="w-40 h-40 mx-auto bg-muted/50 rounded-lg flex items-center justify-center">

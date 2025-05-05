@@ -61,7 +61,7 @@ export default function Home() {
             </a>
             . All rights reserved.
           </p>
-          <p>Built with Next.js, Tailwind, ShadCn and Vercel.</p>
+          <p>Built with Next.js, Tailwind, Shadcn and Vercel.</p>
         </div>
       </footer>
     </div>

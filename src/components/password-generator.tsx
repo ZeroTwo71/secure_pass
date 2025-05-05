@@ -27,6 +27,7 @@ export function PasswordGenerator({ onPasswordChange }: PasswordGeneratorProps =
   // Generate password when settings change
   useEffect(() => {
     generatePassword()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [length, includeUppercase, includeLowercase, includeNumbers, includeSymbols])
   
   // Send password to parent component when it changes
@@ -39,6 +40,7 @@ export function PasswordGenerator({ onPasswordChange }: PasswordGeneratorProps =
   // Calculate password strength
   useEffect(() => {
     calculateStrength()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [password])
 
   const generatePassword = () => {

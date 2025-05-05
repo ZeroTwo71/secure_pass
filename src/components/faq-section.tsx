@@ -40,8 +40,8 @@ export function FAQSection() {
         <AccordionItem value="item-4">
           <AccordionTrigger>How often should I change my passwords?</AccordionTrigger>
           <AccordionContent>
-            Current security best practices recommend changing passwords only when there's a reason to 
-            believe they've been compromised. Using unique, strong passwords for each account and a 
+            Current security best practices recommend changing passwords only when there&apos;s a reason to 
+            believe they&apos;ve been compromised. Using unique, strong passwords for each account and a 
             password manager is more effective than regular password changes. However, for critical 
             accounts, periodic changes can add an extra layer of security.
           </AccordionContent>
