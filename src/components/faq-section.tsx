@@ -23,7 +23,7 @@ export function FAQSection() {
         <AccordionItem value="item-2">
           <AccordionTrigger>Are the generated passwords saved anywhere?</AccordionTrigger>
           <AccordionContent>
-            No, all password generation happens directly in your browser. We don't store, transmit, 
+            No, all password generation happens directly in your browser. We don&apos;t store, transmit, 
             or save your generated passwords on any server. The passwords are never sent across the internet, 
             ensuring your security and privacy.
           </AccordionContent>
