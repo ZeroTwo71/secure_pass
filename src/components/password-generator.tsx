@@ -68,14 +68,25 @@ export function PasswordGenerator({ onPasswordChange }: PasswordGeneratorProps =
   }
 
   const calculateStrength = () => {
+    // Force very weak for extremely short passwords
+    if (length <= 3) {
+      setStrengthIndex(0) // Very Weak
+      return
+    }
+
+    if (length <= 5) {
+      setStrengthIndex(1) // Weak
+      return
+    }
+    
     let strength = 0
 
-    // Add points for length
-    if (length >= 6) strength += 1
-    if (length >= 10) strength += 1
-    if (length >= 14) strength += 1
+    // Add points for length (give higher weight to length)
+    if (length >= 6) strength += 2
+    if (length >= 10) strength += 2
+    if (length >= 14) strength += 2
 
-    // Add points for character types
+    // Add points for character types (but with less weight than length)
     let charTypesCount = 0
     if (includeUppercase) charTypesCount += 1
     if (includeLowercase) charTypesCount += 1
@@ -85,7 +96,7 @@ export function PasswordGenerator({ onPasswordChange }: PasswordGeneratorProps =
     strength += charTypesCount
 
     // Calculate final strength index
-    let strengthIndex = Math.floor(strength / 2)
+    let strengthIndex = Math.floor(strength / 3)
     
     // Special case for Very Strong: all character types AND length >= 16
     if (charTypesCount === 4 && length >= 16) {
